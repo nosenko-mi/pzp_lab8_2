@@ -24,7 +24,7 @@ function task2(a, b) {
 
     a = parseFloat(prompt('A : ', 0))
     b = parseFloat(prompt('B : ', 0))
-
+    console.log(`a: ${a}; b: ${b}`)
     if (a > b) {
         console.log(`max: c = ${a}`)
         alert(`max: c = ${a}`)
@@ -38,6 +38,9 @@ function task2(a, b) {
 
 function task3(a) {
     console.log('TASK 3\n')
+
+    a = parseFloat(prompt('A : ', 0))
+    console.log(`given: ${a}`)
     if (a < 0) {
         a *= -1
     }
@@ -46,14 +49,16 @@ function task3(a) {
 }
 
 
-function task4(x, z) {
+function task4() {
     console.log('TASK 4\n')
 
-    let y = 0;
+    x = parseFloat(prompt('X : ', 0))
+    z = parseFloat(prompt('Z : ', 0))
 
+    let y = 0;
     y = Math.pow(x, 2) + 3 * x * z + 0.5 * Math.pow(z, 2) - (12 / 17)
 
-    console.log(`y = ${y}`)
+    console.log(`x = ${x}; z = ${z}; y = ${y}`)
     return y
 }
 
@@ -66,7 +71,7 @@ function task5() {
     if (age < 18) {
         return
     }
-    if (confirm(`Вам дійсно ${age} років?`) == true && age > 18) {
+    if (confirm(`Вам дійсно ${age} років?`) == true && age >= 18) {
         alert('Доступ дозволено')
     } else {
         alert('Доступ заборонено')
@@ -80,13 +85,13 @@ function task6() {
     let a = parseFloat(prompt('A : ', ''))
 
     if (a > 0) {
-        console.log('number is positive')
+        console.log(`number [${a}] is positive`)
     }
     else if (a < 0) {
-        console.log('number is negative')
+        console.log(`number [${a}] is negative`)
     }
     else {
-        console.log('not a number')
+        console.log(`[${a}] is not a number`)
     }
 }
 
@@ -115,7 +120,12 @@ function task8() {
 
     let a = parseInt(prompt('A : ', ''))
     let b = parseInt(prompt('B : ', ''))
-    alert(canDivide(a, b))
+    if (canDivide(a, b)) {
+        alert(`${a} is divisible by ${b}`)
+    }
+    else {
+        alert(`${a} is not divisible by ${b}`)
+    }
 }
 
 
