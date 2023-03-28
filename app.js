@@ -1,5 +1,3 @@
-
-
 function task1(a, b) {
 
     console.log('TASK 1\n')
@@ -89,6 +87,9 @@ function task6() {
     }
     else if (a < 0) {
         console.log(`number [${a}] is negative`)
+    }
+    else if (a == 0) {
+        console.log(`number [${a}] is 0`)
     }
     else {
         console.log(`[${a}] is not a number`)
